@@ -1,189 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Calculator</title>
-		<style>
-			table {
-				width: 300px;
-				height: 400px;
-			}
-			tr {
-				width: 100%;
-				height: 12.5%;
-			}
-			td {
-					width:20%;
-			}
-			input {
-				width:100%;
-				height:100%;
-			}
-			body {
-				background-image: url(D:/work/IllyaGaponenko/12321.jpg);
-			}
-			input[type="text"]{
-				text-align: right;
-			}
-		</style>
-	</head>
-	<body>
-		<table align="center"  border="1px">
-			<tr>
-				<td colspan="5"><input type="text" name="STR" size="20" value="" disabled=""></td>
-			</tr>
-			<tr>
-				<td colspan="5"><input type="text" name="STR" size="20" value="0" disabled=""></td>
-			</tr>
-			<tr>
-				<td><input type="button" onclick="func(this);" value="MC" ></td>
-				<td><input type="button" onclick="func(this);" value="MR" ></td>
-				<td><input type="button" onclick="func(this);" value="MS" ></td>
-				<td><input type="button" onclick="func(this);" value="M+" ></td>
-				<td><input type="button" onclick="func(this);" value="M-" ></td>
-			</tr>
-			<tr>
-				<td><input type="button" onclick="func(this);" value="<--" ></td>
-				<td><input type="button" onclick="func(this);" value="CE" ></td>
-				<td><input type="button" onclick="func(this);" value="C" ></td>
-				<td><input type="button" onclick="func(this);" value="+-" ></td>
-				<td><input type="button" onclick="func(this);" value="√" ></td>
-			</tr>
-			<tr>
-				<td><input type="button" onclick="func(this);" value="7" ></td>
-				<td><input type="button" onclick="func(this);" value="8" ></td>
-				<td><input type="button" onclick="func(this);" value="9"></td>
-				<td><input type="button" onclick="func(this);" value="/" ></td>
-				<td><input type="button" onclick="func(this);" value="%"></td>
-			</tr>
-			<tr >
-				<td><input type="button" onclick="func(this);" value="4" ></td>
-				<td><input type="button" onclick="func(this);" value="5" ></td>
-				<td><input type="button" onclick="func(this);" value="6" ></td>
-				<td><input type="button" onclick="func(this);" value="*" ></td>
-				<td><input type="button" onclick="func(this);" value="1/x" ></td>
-			</tr>
-			<tr>
-				<td><input type="button"  onclick="func(this);" value="1" ></td>
-				<td><input type="button" onclick="func(this);" value="2" ></td>
-				<td><input type="button" onclick="func(this);" value="3" ></td>
-				<td><input type="button" onclick="func(this);" value="-" ></td>
-				<td rowspan="2"><input type="button" onclick="func(this);" value="=" ></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="button" onclick="func(this);" value="0"  ></td>
-				<td><input type="button" onclick="func(this);" value="," ></td>
-				<td><input type="button" onclick="func(this);" value="+"></td>
-			</tr>
-		</table>
-		<script>
-		var mass_inp = document.getElementsByName('STR');
-		var buff = 0;
-		var flag = false;
-		var input = 0;
-			
-			function clearInput () {
-				mass_inp[0].value = "";
-				mass_inp[1].value = "";
-			}
-			function func (obj) {
-				console.log(obj.value);
-				switch (obj.value)  {
-				case "CE":
-					console.log(obj.value);
-							break;
-					case "C":
-											/*СТИРАЕТ ВХОДНЫЕ ЗНАЧЕНИЯ*/
-												clearInput();
-					console.log(obj.value);
-							break;
+<head>
+	<title>Brain Basket</title>
 
-							case "1/x":
-							if (parseInt(mass_inp[1]) !="0") {
-								mass_inp[1].value = Math.sqrt(parseInt(mass_inp[1].value));
-							}
-							break;
-							
-							case "√":
-							if (parseInt(mass_inp[1].value) >="0") {
-								mass_inp[1].value = Math.sqrt(parseInt(mass_inp[1].value));
-}
-							break;
-
-					case "+":	
-						mass_inp[0].value += mass_inp[1].value + " + ";
-						buff = mass_inp[1].value;
-						mass_inp[1].value = 0;
-					break;
-					case "-":
-					mass_inp[0].value += mass_inp[1].value + " - ";
-						buff = mass_inp[1].value;
-						mass_inp[1].value = 0;
-					break;
-					case "*":
-					mass_inp[0].value += mass_inp[1].value + " * ";
-						buff = mass_inp[1].value;
-						mass_inp[1].value = 0;
-					break;
-					case "/":
-					mass_inp[0].value += mass_inp[1].value + " / ";
-						buff = mass_inp[1].value;
-						mass_inp[1].value = 0;
-					break;
-
-						break;
-					default:
-		console.log(obj.value);
-							break;
-
-							case "<--":
-							if (mass_inp[1].value.length<=1) {
-								mass_inp[1].value = 0;
-							}
-							else {
-						mass_inp[1].value = mass_inp[1].value.substring(0, mass_inp[1].value.length -1);
-						}
-							break;
-
-							case "MC":
-								memory = 0;
-							break;
-							case "MR":
-							mass_inp[1].value = memory;
-							break;
-							case "M+":
-							memory += parseInt(mass_inp[1].value);
-							break;
-							case "M-":
-							memory -= parseInt(mass_inp[1].value);
-							break;
-							case "MS":
-							memory = parseInt(mass_inp[1].value);
-							break;
-								
-								case "0":		
-								if (mass_inp[1].value != "0") {
-									mass_inp[1].value += obj.value;
-								}			
-								break;			
-								case "1":
-								case "2":
-								case "3":
-								case "4":
-								case "5":
-								case "6":
-								case "7":
-								case "8":
-								case "9":
-								if (mass_inp[1].value == "0") {
-									mass_inp[1].value = obj.value;
-								}
-								else{
-		mass_inp[1].value += obj.value;
-	}
-		break;
+</head>
+	<style type="text/css">
+		body{
+			background-color: #778899;
 		}
-				
+		.wrapper{
+			height: 500px;
+			width: 800px;
+			margin: 0 auto;
+			background-image: url(https://twistedsifter.files.wordpress.com/2019/04/black-hole-first-real-photo-9.jpg?w=800&h=500);
+			color: white;
 		}
-		</script>
-	</body>
+		.flex-container1{
+			background-color: #708090;
+			border: 5px ridge darkblue;
+			justify-content: space-between;
+			height: 150px;
+			width: 800px; 
+			flex-direction: row;
+			align-items: flex-start;
+			margin: 0 auto;
+			display: flex;
+		}
+		.logo{
+			background-image: url(https://partners.varsity.com/wp-content/uploads/2018/02/Nike-Logo-Free-PNG-Image-1.png);
+			margin: 0 auto;
+			width: 300px;
+			height: 150px;
+		}
+		ul{
+			margin: 0 auto;
+		}
+		ul li{
+			display: inline-block;
+			padding: 40px 5px;
+			font-style: oblique;
+			color: white;
+			margin: 0 auto;
+		}
+
+	</style>
+<body>
+	<div class="flex-container">
+			<div class="flex-container1">
+				<div class="logo"></div>
+					<ul class="p1">
+						<li><a href="#1"></li>HOME</a>
+						<li><a href="#2"></li>ABOUT</a>
+						<li><a href="#3"></li>SERVICES</a>
+						<li><a href="#5"></li>GALLERY</a>
+						<li><a href="#4"></li>CONTACT US</a>
+
+					</ul>
+			</div>
+		<div class="wrapper">
+			<h1 class="welcome"><a name="1">WELOCME ON</a><span class="HOL"> DARK HOLE SITE</span></h1>
+			<p>We are starting to work in the car store</p>
+		</div>
+	</div>
+</body>
 </html>
