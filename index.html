@@ -1,66 +1,246 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Brain Basket</title>
-
+	<title>Ua_basket</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+       <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
-	<style type="text/css">
-		body{
-			background-color: #778899;
-		}
-		.wrapper{
-			height: 500px;
-			width: 800px;
-			margin: 0 auto;
-			background-image: url(https://twistedsifter.files.wordpress.com/2019/04/black-hole-first-real-photo-9.jpg?w=800&h=500);
-			color: white;
-		}
-		.flex-container1{
-			background-color: #708090;
-			border: 5px ridge darkblue;
-			justify-content: space-between;
-			height: 150px;
-			width: 800px; 
-			flex-direction: row;
-			align-items: flex-start;
-			margin: 0 auto;
-			display: flex;
-		}
-		.logo{
-			background-image: url(https://partners.varsity.com/wp-content/uploads/2018/02/Nike-Logo-Free-PNG-Image-1.png);
-			margin: 0 auto;
-			width: 300px;
-			height: 150px;
-		}
-		ul{
-			margin: 0 auto;
-		}
-		ul li{
-			display: inline-block;
-			padding: 40px 5px;
-			font-style: oblique;
-			color: white;
-			margin: 0 auto;
-		}
-
-	</style>
+<style type="text/css">
+	body {
+		background-color: #1B1B1B;
+    }
+.logo {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ee4B-22i08RGkZir6XacHH3r1adb_FFkMQ11g121SWvAu0MMEA");
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+.wrapper{
+  width:800px;
+  height:500px;
+  margin: 0 auto;
+  background-image: url("https://art-oboi.com.ua/img/gallery/30/thumbs/thumb_m_16900.jpg");
+}
+ul {
+  margin: 0 auto;
+}
+ul li { 
+  display: inline-block;
+  padding: 100px 5px; 
+  font-style: oblique;
+  color: white;
+  margin-top: -40px;
+  }
+.flex-container1 {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width:800px;
+  height: 150px;
+  margin:0 auto;
+  background-color: #1B1B1B;
+  }
+  #cont {
+  width: 100%; 
+  height: 100px;
+  background-image: url("https://art-oboi.com.ua/img/gallery/30/thumbs/thumb_m_16900.jpg");
+  margin-top: 150px;
+}
+.team {
+  margin-top: 50px;
+}
+.hr {
+  color: red;
+  width: 60px;
+  border: 3px solid red;
+  margin: 0 auto;
+  }
+  .flex-container2 {
+  flex-direction: column;
+  }
+.flex-container2 {
+  padding-bottom: 80px;
+  }
+  h1 { 
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  }
+  h2, h3 { 
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+  color: yellow;
+  }
+  .flex-container3, .flex-container4 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+#circle1, #circle2, #circle3, #circle4 {
+  width: 120px;
+  height: 120px;
+  border: 2px solid black;
+  margin: 0 auto;
+  }
+  #abz {
+  padding: 50px 50px 0px 50px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  }
+  #pic, #pic1 {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  margin: 0 auto;	
+  }
+ .welcome {
+ 	padding-top: 150px;
+ }
+ #circle1 {
+ 	background-image: url("http://raketka.kiev.ua/image/cache/data/logo/wilson-tennis-logo-120x120.jpg");
+ }
+  #circle2 {
+ 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_wCh2OymLlIFR4yb65R6Q6L6FrM10zijkp1kb8if9jCKwUTstw");
+ }
+  #circle3 {
+ 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp5tGETUdk_YB_R6jXOnHip--fQKPQZbi4K9oArOwrQgxuw1JsyA");
+ }
+ #circle4 {
+ 	background-image: url("https://cdn.shopify.com/s/files/1/2382/1249/files/adidas-logo.jpg?9640685237373339025");
+ }
+ #pic {
+ 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_iaYKD2XdrT_Hn8ErmLC7McOt1nRhl_RCSS3IoPo_L2csCgWCgg");}
+ #pic1 {
+ 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE1-AsRephAzegFmVAkXCvSOgSbjX2H6dyTijSM9-1RnZEoKID6w");
+ }
+ #carouselExampleSlidesOnly {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+   }
+ @media screen and (max-width: 960px) {
+    .wrapper, .welcome, #carouselExampleSlidesOnly, .flex-container2 {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 960px) {
+    .flex-container3, .flex-container4 {
+        display: flex;
+  		flex-direction: column;
+  		align-items: flex-start;
+    }
+}
+@media screen and (max-width: 960px) {
+    .logo {
+       	width: 60px;
+    	height: 60px;
+    	margin: 0 auto;
+    	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOkjkRN3NsCh9gkfYEL-hYw_gV8AGKBkSCeGv660lohDYhgk9r");
+    }
+    .flex-container1 {
+    	padding-top: 40px;
+    }
+   
+}
+</style>
 <body>
-	<div class="flex-container">
-			<div class="flex-container1">
-				<div class="logo"></div>
-					<ul class="p1">
-						<li><a href="#1"></li>HOME</a>
-						<li><a href="#2"></li>ABOUT</a>
-						<li><a href="#3"></li>SERVICES</a>
-						<li><a href="#5"></li>GALLERY</a>
-						<li><a href="#4"></li>CONTACT US</a>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div class="flex-container">
+<div class="flex-container1">
+  <div class="logo"></div>
+      <ul>
+  <li><a href="#1"><button type="button" class="btn btn-danger">HOME</button></a></li>
+  <li><a href="#2"><button type="button" class="btn btn-danger">ABOUT</button></a></li>
+  <li><a href="#3"><button type="button" class="btn btn-danger">SERVICES</button></a></li>
+  <li><a href="#4"><button type="button" class="btn btn-danger">GALLERY</button></a></li>
+  <li><a href="#5"><button type="button" class="btn btn-danger">CONTACT US</button></a></li>
+    </ul>
+  </div>
+  <div class="wrapper"> 
+  <h1 class="welcome"><a name = "1">WELCOME ON UA_basket</a></h1>
+  <p id="abz">We are starting to work in the sport market and modern innovative Basketball Wearing
+  </p>
+  </div>
+  <div class="flex-container2">
+    <div id="cont"> <h1 class="team"><a name = "2">OUR PARTNERS</a></h1>
+    <div class="hr"> </div></div>
+    </div>
+<div class="flex-container3">
+  <div class="a1">
+  <div id="circle1"></div>
+  <h2 >Wilson</h2>
+  <h3 >Balls</h3>
+  <p id="abz"> The best balls diller</p>
+  </div>
+  <div class="b1">
+  <div id="circle2"></div>
+  <h2 >NIKE Hyperdank</h2>
+  <h3 >Flyknits</h3>
+  <p id="abz"> The best shoes diller</p>
+  </div>
+  <div class="c1">
+  <div id="circle3"></div>
+  <h2 >Air Jordan</h2>
+  <h3 >T-Shirts and shorts</h3>
+  <p id="abz"> The best T-Shirts and shorts diller</p>
+  </div>
+  <div class="d1">
+  <div id="circle4"></div>
+  <h2 >Adidas</h2>
+  <h3 >Socks</h3>
+  <p id="abz"> The best socks diller</p>
+  </div>
+  </div>
+  <div class="flex-container2">
+    <div id="cont"> <h1 class="team"><a name = "3">TOP PRODUCKTS</a></h1>
+    <div class="hr"> </div></div>
+    </div>
+    <div class="flex-container4">
+  <div class="a1">
+  <div id="pic"></div>
+  <h2 >Nike Hyperdunh 2017 Violent/Blue</h2>
+  <h3 >Flyknit</h3>
+  <p id="abz"> This product has been selected by site visitors.</p>
+  </div>
+  <div class="b1">
+  <div id="pic1"></div>
+  <h2 >Wilson Solution</h2>
+  <h3 >Ball</h3>
+  <p id="abz"> This product has been selected by site visitors.</p>
+  </div>
+</div>
+<div class="flex-container2">
+    <div id="cont"> <h1 class="team"><a name = "4">TOP MOMENTS LAST NIGHT</a></h1>
+    <div class="hr"> </div></div>
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgNm3yAXfwx7YjPfOJpIaEXilxTNYR4KD1Y7RW0voLQ2xy7S4" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScjpX4MfNDBMlFRT_U2dg8q_m22XfADiN-fEVBj--VsO-ig9o6PA" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZREFcUpv0UKhcvaKKo3-f67CihVIzT9Qy1W6ACO-COD_33TB" class="d-block w-100" alt="..."></div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeMGWzrLTKPL2hsNMcx7m5Dl9cij7V13w-lZWf4r0O1QLEsEZQcw" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+</div>
 
-					</ul>
-			</div>
-		<div class="wrapper">
-			<h1 class="welcome"><a name="1">WELOCME ON</a><span class="HOL"> DARK HOLE SITE</span></h1>
-			<p>We are starting to work in the car store</p>
-		</div>
-	</div>
 </body>
 </html>
